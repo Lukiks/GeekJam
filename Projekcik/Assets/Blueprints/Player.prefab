@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1287071903}
   - component: {fileID: 1287071899}
   - component: {fileID: 1055394323241634675}
+  - component: {fileID: 1287071904}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -58,6 +59,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  panelPaper: {fileID: 0}
+  paperBool: 0
   eq:
   - {fileID: 0}
   - {fileID: 0}
@@ -95,8 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beb5874532add8a4cb0cd3a2fbf4b308, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.5
+  moveSpeed: 5
   rb: {fileID: 305988542289625710}
+  anim: {fileID: 1287071903}
 --- !u!212 &1287071902
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -205,6 +209,22 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 15, y: 32}
+  m_Offset: {x: 0, y: -7}
+  m_Size: {x: 15, y: 20}
   m_Direction: 0
+--- !u!114 &1287071904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305988542289625696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aadcace2b5b5bde4286566104bd29267, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 0}
+  player: {fileID: 0}
+  gun: 0
+  bulletForce: 10
