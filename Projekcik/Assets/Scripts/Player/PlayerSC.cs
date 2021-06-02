@@ -15,6 +15,10 @@ public class PlayerSC : MonoBehaviour
 
     public GameObject deadPanel;
     public GameObject[] hrImages;
+    public GameObject panelPaper;
+    public bool paperBool = false;
+    private float paperTimer = 5f;
+
 
     public Text[] eq;
 
@@ -25,6 +29,16 @@ public class PlayerSC : MonoBehaviour
 
     void Update()
     {
+        if (paperBool)
+        {
+            paperTimer -= Time.deltaTime;
+            if (paperTimer < 0f)
+                paperBool = false;
+        }
+        else
+            paperTimer = 5f;
+        panelPaper.active = paperBool;
+
         eq[0].text = metalScrap.ToString();
         eq[1].text = electronicParts.ToString();
         eq[2].text = energyCells.ToString();
