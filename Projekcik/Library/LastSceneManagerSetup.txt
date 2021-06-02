@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/_Scenes/Menu.unity
+=======
+- path: Assets/_Scenes/Game.unity
+>>>>>>> d87a4db67ff08c8b6728061fdf92c5e1103cf834
   isLoaded: 1
   isActive: 1
   isSubScene: 0
