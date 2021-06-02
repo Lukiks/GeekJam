@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-   /* public GameObject bullet;
+    public GameObject bullet;
     public GameObject player;
     public bool gun = false;
     public float bulletForce = 10f;
@@ -19,10 +19,7 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 lookDir = mousePos - rb1.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x * Mathf.Rad2Deg - 90f);
-        rb1.rotation = angle;
+        gameObject.GetComponent<Animator>().SetBool("gun", gun);
         if (gun)
         {
             if(Input.GetButtonDown("Fire1")&&player.GetComponent<PlayerSC>().energyCells > 0)
@@ -42,5 +39,5 @@ public class Shooting : MonoBehaviour
     public void TakeGun()
     {
         gun = !gun;
-    }*/
+    }
 }

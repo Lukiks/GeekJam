@@ -8816,6 +8816,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7838446268745425292, guid: 7b4d2a4a547e0be4492e2eeb0ddcfa3f, type: 3}
+      propertyPath: paper
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838446268745425292, guid: 7b4d2a4a547e0be4492e2eeb0ddcfa3f, type: 3}
       propertyPath: timer
       value: 
       objectReference: {fileID: 1473638147}
