@@ -64,7 +64,9 @@ public class Interact : MonoBehaviour
                 break;
             //Paper
             case 1:
-                //player.GetComponent<Paper>().
+                player.GetComponent<Paper>().papersbool[paper] = true;
+                player.GetComponent<PlayerSC>().paperBool = true;
+                Destroy(gameObject);
                 break;
             //Car
             case 2:
@@ -77,9 +79,21 @@ public class Interact : MonoBehaviour
                 break;
             //Robot
             case 3:
-                player.GetComponent<PlayerSC>().metalScrap += 1;
-                player.GetComponent<PlayerSC>().electronicParts += 2;
-                player.GetComponent<PlayerSC>().energyCells += 4;
+                if (paper == 0)
+                {
+                    player.GetComponent<PlayerSC>().metalScrap += 1;
+                    player.GetComponent<PlayerSC>().electronicParts += 2;
+                    player.GetComponent<PlayerSC>().energyCells += 4;
+                    paper = 1;
+                }
+                break;
+            //Wiadro
+            case 4:
+                if (paper == 0)
+                {
+                    player.GetComponent<PlayerSC>().metalScrap += 1;
+                    paper = 1;
+                }
                 break;
         }
     }
